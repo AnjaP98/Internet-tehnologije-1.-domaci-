@@ -4,14 +4,14 @@ require "knjige.php";
 
 if(isset($_POST['submit'])){
 
-    if(empty($_POST['id'])|| empty($_POST['naziv'])||empty($_POST['autor'])||empty($_POST['zanr'])||
+    if(empty($_POST['id'])|| empty($_POST['naziv'])||empty($_POST['text'])||empty($_POST['zanr'])||
     empty($_POST['jezik'])||empty($_POST['cena'])){
         echo "Popunite prazna polja.";
     
     }else{
     $id= $_POST['id'];
     $naziv= $_POST['naziv'];
-    $autor= $_POST['autor'];
+    $autor= $_POST['text'];
     $zanr= $_POST['zanr'];
    
     $jezik= $_POST['jezik'];

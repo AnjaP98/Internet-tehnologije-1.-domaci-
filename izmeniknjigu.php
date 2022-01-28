@@ -29,9 +29,9 @@ if(isset($_GET['edit'])){
   
       $row=$result->fetch_array();
       
-      $naziv=$row['naziv'];
-      $autor=$row['autor'];
-      $zanr=$row['zanr'];
+      $naziv=$row["naziv"];
+      $autor=$row["autor"];
+      $zanr=$row["zanr"];
       $jezik=$row["jezik"];
       $cena=$row["cena"];
       

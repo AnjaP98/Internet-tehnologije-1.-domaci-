@@ -17,6 +17,25 @@ function place(ele){
 	document.getElementById("livesearch").style.display = "none";
 }
 </script>
+	
+	<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$("#ime").blur(function(){
+var vrednost = $("#ime").val();
+$.get("provera.php", { naziv: vrednost },
+   function(data){
+   if (data == 0){
+   $("#user").html("Knjiga sa ovim naslovom već postoji u bazi");
+   $("#ime").focus();
+   }
+   if (data == 1){
+   $("#user").html("Knjiga sa ovim naslovom ne postoji u bazi");
+   }   
+   });
+});
+});
+</script>
 
     <title>Dodavanje knjiga</title>
 

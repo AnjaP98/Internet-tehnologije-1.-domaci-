@@ -132,7 +132,7 @@ function place(ele){
 
 
 
-
+ 
 <div class="container-fluid bg-grey">
   <h2 class="text-center">Dodavanje knjige</h2>
   <form action="dodajknjigu.php" method="POST" class="formaUnos">
@@ -166,6 +166,7 @@ function place(ele){
         </div>
         <div class="row">
         <div class="col-sm-12 form-group">
+		
         <button type="submit" name="submit" class="btn">Dodaj</button>
         </div>
       </div>

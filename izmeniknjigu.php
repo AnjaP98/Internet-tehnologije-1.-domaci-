@@ -14,7 +14,7 @@
     
 </head>
 <body>
-
+<a href="sveknjige.php"><button >Nazad</button></a>
     <div >
         <h2>Izmena knjige</h2>    
     </div>
@@ -39,29 +39,49 @@ if(isset($_GET['edit'])){
       
    
   }  ?><div>
+     <div class="container-fluid bg-grey">
+  <h2 class="text-center">Izmena knjige</h2>
+  
+  <input type="hidden" id="hidden" value="<?php echo $id;?>">
+  <br>
+  <br>
+  <div class="row">
+    <div class="container">
     <form  method="POST" id="update" class="formaIzmena">
-    <input type="hidden" id="hidden" value="<?php echo $id;?>">
-        <div class="polje">
-            <label for="nazivupdate">Naziv knjige</label>
-            <input type="text" name="nazivu" id="imeU" value="<?php echo $naziv;?>">
-        </div><br>
-        <div class="polje">
-            <label for="autorupdate">Autor</label>
-            <input type="text" name="autoru" id="autoru" value="<?php echo $autor;?>">
-        </div><br>
-        <div class="polje">
-            <label for="zanrupdate">Zanr</label>
-            <input type="text" name="zanru" id="zanru" value="<?php echo $zanr;?>">
-        </div><br>
-        <div class="polje">
-            <label for="jezikupdate">Jezik</label>
-            <input type="text" name="jeziku" id="jeziku" value="<?php echo $jezik;?>">
-        </div><br>
-        <div class="polje">
-            <label for="cenaupdate">Cena</label>
-            <input type="number" name="cenau" id="cenau" value="<?php echo $cena;?>">
-        </div><br>
+    <div class="col-sm-5"  >
+      <div class="row">
+        
+        <div class="col-sm-6 form-group">
+          <input class="form-control" type="text" name="nazivu" id="imeU" value="<?php echo $naziv;?>"></div>
+         
+        <div class="col-sm-6 form-group">
+          <input class="form-control" type="text" name="autoru" id="autoru" value="<?php echo $autor;?>" >
+          </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" type="text" name="zanru" id="zanru" value="<?php echo $zanr;?>">
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" type="text"name="jeziku" id="jeziku" value="<?php echo $jezik;?>">
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" type="number" name="cenau" id="cenau" value="<?php echo $cena;?>" >
+        </div>
        
+        <div class="row">
+        <div class="col-sm-12 form-group">
+        <input type="hidden" value="<?php echo $id;?>" id="id">
+        <input type="submit" class="dugme2" name="submit" value="Izmeni" id="update">
+        </div>
+      </div>
+      </div>
+      
+    </div>
+    </form> 
+  </div>
+  
+</div>
+</div>
+    
   
 <input type="hidden" value="<?php echo $id;?>" id="id">
         <div class="polje">
